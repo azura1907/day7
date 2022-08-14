@@ -7,7 +7,7 @@ main {
 #singer{
     width: 80%;
     height: 80vh;
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    /* clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); */
     background: #15467d;
     display: flex;
     justify-content: center;
@@ -15,12 +15,35 @@ main {
 }
 
 #singer .box{
-    width: 65%;
-    height: 60%;
+    width: 50%;
+    height: 50%;
     background-image: linear-gradient(to left,#b57e18,orange);
     overflow: hidden;
     position: relative;
 }
+
+#singer .box:nth-child(1){
+    top:0%;
+    left:0%;
+    transform: translate(-25%,-25%);
+}
+
+#singer .box:nth-child(2){
+    top:0%;
+    left:50%;
+}
+
+#singer .box:nth-child(3){
+    top:50%;
+    left:0%;
+}
+
+#singer .box:nth-child(4){
+    top:50%;
+    right:0%;
+}
+
+
 
 #singer .box .content{
     width: 50%;
