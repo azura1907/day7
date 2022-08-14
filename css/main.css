@@ -1,0 +1,202 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#singer{
+    width: 80%;
+    height: 80vh;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    background: #15467d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#singer .box{
+    width: 65%;
+    height: 60%;
+    background-image: linear-gradient(to left,#b57e18,orange);
+    overflow: hidden;
+    position: relative;
+}
+
+#singer .box .content{
+    width: 50%;
+    position: absolute;
+    transform: translateX(50%);
+    opacity: 0;
+    transition: 2s;
+}
+
+#singer .box:hover .content{
+    transform: translateX(5%);
+    opacity: 1;
+    transition: 2s;
+}
+
+#singer .box img{
+    transition: 2s;
+}
+
+#singer .box:hover img{
+    transform: translate(30px,15px);
+    transition-duration: 2s;
+    scale: 1.5;
+}
+
+#singer .box .content h1{
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#singer .box .content p{
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#singer .box .content .contact-button{
+    width: 120px;
+    height: 40px;
+    background-image: linear-gradient(to right,aqua,blue);
+    border-radius: 20%;
+    border: none;
+}
+
+#singer .box .content .contact-button a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#singer .box img{
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#singer .box span:nth-child(1){
+    width: 100%;
+    height: 5px;
+    background: darkcyan;
+    display: block;
+    animation: spanTop 2s linear alternate infinite;
+}
+
+#singer .box span:nth-child(2){
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: darkcyan;
+    display: block;
+    animation: spanRight 2s linear alternate infinite;
+}
+
+#singer .box span:nth-child(3){
+    position: absolute;
+    bottom: 0%;
+    left: 100%;
+    width: 100%;
+    height: 5px;
+    background: darkcyan;
+    display: block;
+    animation: spanBottom 2s linear alternate infinite;
+}
+
+#singer .box span:nth-child(4){
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: darkcyan;
+    display: block;
+    animation: spanLeft 2s linear alternate infinite;
+}
+
+#singer .box:before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    clip-path: circle(25% at 50% 50%);
+    background-image: linear-gradient(to right,aquamarine,#3693b3);
+    transition: 2s;
+}
+
+#singer .box:hover:before{
+    clip-path: circle(100% at 50% 50%);
+}
+
+@keyframes spanTop {
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+    
+}
+
+@keyframes spanRight {
+    0%{
+        transform: translateY(0%);
+    }
+
+    100%{
+        transform: translateY(100%);
+    }
+    
+}
+
+@keyframes spanBottom {
+    0%{
+        transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+    
+}
+
+@keyframes spanLeft {
+    0%{
+        transform: translateY(0%);
+    }
+
+    100%{
+        transform: translateY(-100%);
+    }
+    
+}
+
+/* @keyframes move {
+    0% {
+        transform: translateX(30%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes imgMove  {
+    100%{
+        transform: translate(50px,50px);
+        transform: scale(1.5);
+    } */
+/* } */
+
